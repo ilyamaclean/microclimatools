@@ -16,3 +16,12 @@ lonsfromr <- function(r) {
   lns <- array(lns, dim = dim(r)[1:2])
   lns
 }
+
+#calculate the number of hours in a month
+
+humf <- function(month, year) {
+  dm <- c(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+  if (year%%4 == 0) dm[2] <- 29
+  him <- dm[month] * 24
+  him
+}
